@@ -1,0 +1,9 @@
+{
+  "name": "save-class",
+  "version": "1.0.0",
+  "description": "商标分类修改",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "^2.7.0"
+  }
+}

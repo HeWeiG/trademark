@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="user-info">
+    <image src="{{userInfo.avatar || '/assets/avatar/default.png'}}" class="user-avatar"></image>
+    <view class="user-detail">
+      <text class="user-name">{{userInfo.nickName || '点击登录'}}</text>
+      <text class="user-desc">收藏的商标随时查看</text>
+    </view>
+    <button class="login-btn" wx:if="{{!hasLogin}}" bindtap="onLogin">登录</button>
+  </view>
+  
+  <!-- 收藏统计 -->
+  <view class="stats-section">
+    <view class="stat-item">
+      <text class="stat-number">{{collectionCount}}</text>
+      <text class="stat-label">收藏商标</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-number">{{recentCount}}</text>
+      <text class="stat-label">最近浏览</text>
+    </view>
+  </view>
+  
+  <!-- 收藏列表 -->
+  <scroll-view class="list-container" scroll-y refresher-enabled bindrefresherrefresh="onPullDownRefresh">
+    <view class="empty-tip" wx:if="{{collectionCount === 0}}">
+      <image src="/assets/icons/collection-big.png" class="empty-icon"></image>
+      <text class="empty-text">暂无收藏的商标</text>
+      <text class="empty-desc">去精品商标页发现心仪商标吧</text>
+      <button class="go-btn" bindtap="goToTrademark">去逛逛</button>
+    </view>
+    
+    <!-- 这里可以添加收藏列表 -->
+  </scroll-view>
+</view>

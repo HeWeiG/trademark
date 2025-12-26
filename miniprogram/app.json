@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/trademark-classes/trademark-classes",
+    "pages/discount-trademark/discount-trademark",
+    "pages/search-trademark/search-trademark",
+    "pages/my-collection/my-collection"
+  ],
+  "window": {
+    "navigationBarTitleText": "商标宝",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f9fa",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/trademark-classes/trademark-classes",
+        "text": "精品商标",
+        "iconPath": "assets/tabbar/quality.png",
+        "selectedIconPath": "assets/tabbar/quality-active.png"
+      },
+      {
+        "pagePath": "pages/discount-trademark/discount-trademark",
+        "text": "特惠商标",
+        "iconPath": "assets/tabbar/discount.png",
+        "selectedIconPath": "assets/tabbar/discount-active.png"
+      },
+      {
+        "pagePath": "pages/search-trademark/search-trademark",
+        "text": "商标搜索",
+        "iconPath": "assets/tabbar/search.png",
+        "selectedIconPath": "assets/tabbar/search-active.png"
+      },
+      {
+        "pagePath": "pages/my-collection/my-collection",
+        "text": "我的收藏",
+        "iconPath": "assets/tabbar/collection.png",
+        "selectedIconPath": "assets/tabbar/collection-active.png"
+      }
+    ]
+  },
+  "cloud": true
+}

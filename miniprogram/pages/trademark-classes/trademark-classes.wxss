@@ -1,0 +1,303 @@
+/* pages/trademark-classes/trademark-classes.wxss */
+
+
+
+
+/* 页面整体 - 极简背景 */
+.container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+
+
+     
+   
+
+
+
+
+
+
+  
+  padding: 0;
+}
+
+/* 列表容器 */   
+
+
+
+
+
+
+
+   
+.list-container {
+  padding: 20rpx 0;
+}
+
+/* 分类项目 - 紧凑单行卡片 */
+.class-item {
+  background: #ffffff;
+  margin: 0 24rpx 16rpx;
+  padding: 28rpx 32rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  position: relative;
+  border-left: 4rpx solid;
+}
+
+.class-item:active {
+  transform: translateY(-1rpx);
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+/* 左侧图标 */
+.item-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+  font-size: 32rpx;
+}
+
+/* 中间内容区域 - 单行布局 */
+.item-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0; /* 防止文本溢出 */
+}
+
+.class-info {
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+  min-width: 0;
+  margin-right: 20rpx;
+}
+
+.class-code {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a73e8;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.class-name {
+  font-size: 30rpx;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  margin-right: 20rpx;
+}
+
+.trademark-count {
+  font-size: 26rpx;
+  color: #666666;
+  background: #f8f9fa;
+  padding: 6rpx 14rpx;
+  border-radius: 12rpx;
+  flex-shrink: 0;
+  border: 1rpx solid #f0f0f0;
+}
+
+/* 右侧箭头 */
+.item-arrow {
+  margin-left: 12rpx;
+  color: #dddddd;
+  flex-shrink: 0;
+}
+
+.icon-arrow {
+  font-size: 32rpx;
+  font-weight: 300;
+}
+
+/* 分类编码颜色系统 - 图标和边框对应 */
+/* 商标分类45种颜色样式 - 基于Material Design调色板 */
+
+/* 第01-10类 */
+.class-item[data-code="01"] { border-color: #e53935; }
+.class-item[data-code="01"] .item-icon { background: #ffebee; color: #e53935 !important; }
+
+.class-item[data-code="02"] { border-color: #fb8c00; }
+.class-item[data-code="02"] .item-icon { background: #fff3e0; color: #fb8c00 !important; }
+
+.class-item[data-code="03"] { border-color: #fdd835; }
+.class-item[data-code="03"] .item-icon { background: #fffde7; color: #fdd835 !important; }
+
+.class-item[data-code="04"] { border-color: #43a047; }
+.class-item[data-code="04"] .item-icon { background: #e8f5e9; color: #43a047 !important; }
+
+.class-item[data-code="05"] { border-color: #1e88e5; }
+.class-item[data-code="05"] .item-icon { background: #e3f2fd; color: #1e88e5 !important; }
+
+.class-item[data-code="06"] { border-color: #8e24aa; }
+.class-item[data-code="06"] .item-icon { background: #f3e5f5; color: #8e24aa !important; }
+
+.class-item[data-code="07"] { border-color: #5d4037; }
+.class-item[data-code="07"] .item-icon { background: #efebe9; color: #5d4037 !important; }
+
+.class-item[data-code="08"] { border-color: #546e7a; }
+.class-item[data-code="08"] .item-icon { background: #eceff1; color: #546e7a !important; }
+
+.class-item[data-code="09"] { border-color: #3949ab; }
+.class-item[data-code="09"] .item-icon { background: #e8eaf6; color: #3949ab !important; }
+
+.class-item[data-code="10"] { border-color: #00897b; }
+.class-item[data-code="10"] .item-icon { background: #e0f2f1; color: #00897b !important; }
+
+/* 第11-20类 */
+.class-item[data-code="11"] { border-color: #f4511e; }
+.class-item[data-code="11"] .item-icon { background: #fbe9e7; color: #f4511e !important; }
+
+.class-item[data-code="12"] { border-color: #00acc1; }
+.class-item[data-code="12"] .item-icon { background: #e0f7fa; color: #00acc1 !important; }
+
+.class-item[data-code="13"] { border-color: #7cb342; }
+.class-item[data-code="13"] .item-icon { background: #f1f8e9; color: #7cb342 !important; }
+
+.class-item[data-code="14"] { border-color: #6d4c41; }
+.class-item[data-code="14"] .item-icon { background: #efebe9; color: #6d4c41 !important; }
+
+.class-item[data-code="15"] { border-color: #5c6bc0; }
+.class-item[data-code="15"] .item-icon { background: #e8eaf6; color: #5c6bc0 !important; }
+
+.class-item[data-code="16"] { border-color: #26a69a; }
+.class-item[data-code="16"] .item-icon { background: #e0f2f1; color: #26a69a !important; }
+
+.class-item[data-code="17"] { border-color: #ffa726; }
+.class-item[data-code="17"] .item-icon { background: #fff3e0; color: #ffa726 !important; }
+
+.class-item[data-code="18"] { border-color: #ab47bc; }
+.class-item[data-code="18"] .item-icon { background: #f3e5f5; color: #ab47bc !important; }
+
+.class-item[data-code="19"] { border-color: #78909c; }
+.class-item[data-code="19"] .item-icon { background: #eceff1; color: #78909c !important; }
+
+.class-item[data-code="20"] { border-color: #8d6e63; }
+.class-item[data-code="20"] .item-icon { background: #efebe9; color: #8d6e63 !important; }
+
+/* 第21-30类 */
+.class-item[data-code="21"] { border-color: #42a5f5; }
+.class-item[data-code="21"] .item-icon { background: #e3f2fd; color: #42a5f5 !important; }
+
+.class-item[data-code="22"] { border-color: #66bb6a; }
+.class-item[data-code="22"] .item-icon { background: #e8f5e9; color: #66bb6a !important; }
+
+.class-item[data-code="23"] { border-color: #ffca28; }
+.class-item[data-code="23"] .item-icon { background: #fffde7; color: #ffca28 !important; }
+
+.class-item[data-code="24"] { border-color: #ef5350; }
+.class-item[data-code="24"] .item-icon { background: #ffebee; color: #ef5350 !important; }
+
+.class-item[data-code="25"] { border-color: #7e57c2; }
+.class-item[data-code="25"] .item-icon { background: #ede7f6; color: #7e57c2 !important; }
+
+.class-item[data-code="26"] { border-color: #26c6da; }
+.class-item[data-code="26"] .item-icon { background: #e0f7fa; color: #26c6da !important; }
+
+.class-item[data-code="27"] { border-color: #d4e157; }
+.class-item[data-code="27"] .item-icon { background: #f9fbe7; color: #d4e157 !important; }
+
+.class-item[data-code="28"] { border-color: #ec407a; }
+.class-item[data-code="28"] .item-icon { background: #fce4ec; color: #ec407a !important; }
+
+.class-item[data-code="29"] { border-color: #ff7043; }
+.class-item[data-code="29"] .item-icon { background: #fbe9e7; color: #ff7043 !important; }
+
+.class-item[data-code="30"] { border-color: #9ccc65; }
+.class-item[data-code="30"] .item-icon { background: #f1f8e9; color: #9ccc65 !important; }
+
+/* 第31-40类 */
+.class-item[data-code="31"] { border-color: #26a69a; }
+.class-item[data-code="31"] .item-icon { background: #e0f2f1; color: #26a69a !important; }
+
+.class-item[data-code="32"] { border-color: #ab47bc; }
+.class-item[data-code="32"] .item-icon { background: #f3e5f5; color: #ab47bc !important; }
+
+.class-item[data-code="33"] { border-color: #5c6bc0; }
+.class-item[data-code="33"] .item-icon { background: #e8eaf6; color: #5c6bc0 !important; }
+
+.class-item[data-code="34"] { border-color: #78909c; }
+.class-item[data-code="34"] .item-icon { background: #eceff1; color: #78909c !important; }
+
+.class-item[data-code="35"] { border-color: #ffa726; }
+.class-item[data-code="35"] .item-icon { background: #fff3e0; color: #ffa726 !important; }
+
+.class-item[data-code="36"] { border-color: #8d6e63; }
+.class-item[data-code="36"] .item-icon { background: #efebe9; color: #8d6e63 !important; }
+
+.class-item[data-code="37"] { border-color: #42a5f5; }
+.class-item[data-code="37"] .item-icon { background: #e3f2fd; color: #42a5f5 !important; }
+
+.class-item[data-code="38"] { border-color: #66bb6a; }
+.class-item[data-code="38"] .item-icon { background: #e8f5e9; color: #66bb6a !important; }
+
+.class-item[data-code="39"] { border-color: #ffca28; }
+.class-item[data-code="39"] .item-icon { background: #fffde7; color: #ffca28 !important; }
+
+.class-item[data-code="40"] { border-color: #ef5350; }
+.class-item[data-code="40"] .item-icon { background: #ffebee; color: #ef5350 !important; }
+
+/* 第41-45类 */
+.class-item[data-code="41"] { border-color: #7e57c2; }
+.class-item[data-code="41"] .item-icon { background: #ede7f6; color: #7e57c2 !important; }
+
+.class-item[data-code="42"] { border-color: #26c6da; }
+.class-item[data-code="42"] .item-icon { background: #e0f7fa; color: #26c6da !important; }
+
+.class-item[data-code="43"] { border-color: #d4e157; }
+.class-item[data-code="43"] .item-icon { background: #f9fbe7; color: #d4e157 !important; }
+
+.class-item[data-code="44"] { border-color: #ec407a; }
+.class-item[data-code="44"] .item-icon { background: #fce4ec; color: #ec407a !important; }
+
+.class-item[data-code="45"] { border-color: #ff7043; }
+.class-item[data-code="45"] .item-icon { background: #fbe9e7; color: #ff7043 !important; }
+
+/* 默认样式 - 如果data-code不在1-45之间 */
+.class-item:not([data-code="01"]):not([data-code="02"]):not([data-code="03"]):not([data-code="04"]):not([data-code="05"]):not([data-code="06"]):not([data-code="07"]):not([data-code="08"]):not([data-code="09"]):not([data-code="10"]):not([data-code="11"]):not([data-code="12"]):not([data-code="13"]):not([data-code="14"]):not([data-code="15"]):not([data-code="16"]):not([data-code="17"]):not([data-code="18"]):not([data-code="19"]):not([data-code="20"]):not([data-code="21"]):not([data-code="22"]):not([data-code="23"]):not([data-code="24"]):not([data-code="25"]):not([data-code="26"]):not([data-code="27"]):not([data-code="28"]):not([data-code="29"]):not([data-code="30"]):not([data-code="31"]):not([data-code="32"]):not([data-code="33"]):not([data-code="34"]):not([data-code="35"]):not([data-code="36"]):not([data-code="37"]):not([data-code="38"]):not([data-code="39"]):not([data-code="40"]):not([data-code="41"]):not([data-code="42"]):not([data-code="43"]):not([data-code="44"]):not([data-code="45"]) {
+  border-color: #9e9e9e;
+}
+
+.class-item:not([data-code="01"]):not([data-code="02"]):not([data-code="03"]):not([data-code="04"]):not([data-code="05"]):not([data-code="06"]):not([data-code="07"]):not([data-code="08"]):not([data-code="09"]):not([data-code="10"]):not([data-code="11"]):not([data-code="12"]):not([data-code="13"]):not([data-code="14"]):not([data-code="15"]):not([data-code="16"]):not([data-code="17"]):not([data-code="18"]):not([data-code="19"]):not([data-code="20"]):not([data-code="21"]):not([data-code="22"]):not([data-code="23"]):not([data-code="24"]):not([data-code="25"]):not([data-code="26"]):not([data-code="27"]):not([data-code="28"]):not([data-code="29"]):not([data-code="30"]):not([data-code="31"]):not([data-code="32"]):not([data-code="33"]):not([data-code="34"]):not([data-code="35"]):not([data-code="36"]):not([data-code="37"]):not([data-code="38"]):not([data-code="39"]):not([data-code="40"]):not([data-code="41"]):not([data-code="42"]):not([data-code="43"]):not([data-code="44"]):not([data-code="45"]) .item-icon {
+  background: #f5f5f5;
+  color: #9e9e9e !important;
+}
+/* 加载和空状态 */
+.loading-container, .empty-container {
+  padding: 100rpx 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loading-text {
+  font-size: 28rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+}
+
+.empty-tip {
+  font-size: 24rpx;
+  color: #bbbbbb;
+}

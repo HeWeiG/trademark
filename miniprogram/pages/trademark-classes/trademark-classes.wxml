@@ -1,0 +1,24 @@
+<view class="container">
+  <scroll-view class="list-container" scroll-y>
+    <block wx:for="{{classes}}" wx:key="code">
+      <view class="class-item" data-code="{{item.code}}" bindtap="onItemTap">
+        <!-- 左侧图标 -->
+        <view class="item-icon iconfont {{item.iconClass}}"></view>
+        
+        <!-- 中间内容 - 单行布局 -->
+        <view class="item-content">
+          <view class="class-info">
+            <text class="class-code">{{item.code}}</text>
+            <text class="class-name">{{item.name}}</text>
+            <text class="trademark-count">{{item.count}}件</text>
+          </view>
+          
+          <!-- 右侧箭头 -->
+          <view class="item-arrow">
+            <text class="icon-arrow">›</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

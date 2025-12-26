@@ -1,0 +1,47 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <view class="search-input-container">
+      <input 
+        class="search-input" 
+        placeholder="请输入商标名称、分类或注册号" 
+        placeholder-class="placeholder"
+        bindinput="onSearchInput"
+        bindconfirm="onSearchConfirm"
+        value="{{searchKeyword}}"
+      />
+      <view class="search-icon" bindtap="onSearch">
+        <text class="iconfont icon-search">🔍</text>
+      </view>
+    </view>
+    <view class="search-tips">
+      <text class="tip-item" data-type="hot" bindtap="onTipTap">热门商标</text>
+      <text class="tip-item" data-type="35" bindtap="onTipTap">第35类</text>
+      <text class="tip-item" data-type="25" bindtap="onTipTap">第25类</text>
+      <text class="tip-item" data-type="09" bindtap="onTipTap">第09类</text>
+    </view>
+  </view>
+  
+  <!-- 搜索历史 -->
+  <view class="history-section" wx:if="{{history.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">搜索历史</text>
+      <text class="clear-history" bindtap="clearHistory">清空</text>
+    </view>
+    <view class="history-list">
+      <block wx:for="{{history}}" wx:key="index">
+        <view class="history-item" data-keyword="{{item}}" bindtap="onHistoryTap">
+          <text class="history-text">{{item}}</text>
+          <text class="iconfont icon-close">×</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 空状态 -->
+  <view class="empty-tip" wx:if="{{history.length === 0}}">
+    <image src="/assets/icons/search-big.png" class="empty-icon"></image>
+    <text class="empty-text">快速查找心仪商标</text>
+    <text class="empty-desc">支持名称、分类、注册号搜索</text>
+  </view>
+</view>

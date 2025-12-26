@@ -1,0 +1,9 @@
+{
+  "name": "batch-classes",
+  "version": "1.0.0",
+  "description": "商标分类下拉查询",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "^2.7.0"
+  }
+}
