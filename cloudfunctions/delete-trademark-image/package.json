@@ -1,0 +1,9 @@
+{
+  "name": "update-trademark-status",
+  "version": "1.0.0",
+  "description": "图片删除",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "^2.7.0"
+  }
+}
